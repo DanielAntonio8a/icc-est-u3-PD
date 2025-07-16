@@ -1,6 +1,12 @@
+import java.lang.reflect.Array;
+import java.nio.file.Path;
+import java.util.Arrays;
+import java.util.List;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        runEjerciciosPD();
+        //runEjerciciosPD();
+        runMaze();
     }
 
     public static void runEjerciciosPD() {
@@ -20,5 +26,32 @@ public class App {
         long end1 = System.nanoTime();
         long duration1 = end1 - start1;
         System.out.println("Resultado = " + resultado1 + " en tiempo = " + duration1 + " nanosegundos");
+    }
+    private static void runMaze(){
+        boolean [][] predefinedMaze= {
+            {true, true,true,true},
+            {false,true,true,true} ,       
+            {true,true,false,false},
+            {true,true,true,true}};
+            //Clase MAZE variable globla predefinedMaze 
+    Maze maze = new Maze(predefinedMaze);
+            System.out.println("\n Laberinto:\n");
+            maze.printMaze();
+
+            Cell start = new Cell(0,0);
+            Cell end = new Cell(3,3);
+            List<MazeSolver> solvers = Arrays.asList(
+                new MazeSolverRecursivo()
+                // new MazeSolverRecursivoCompleto(),
+                // new MazeSolverBFS(),
+                // new MazeSolverDFS()
+                );
+
+            MazeSolver solver= solvers.get(0);
+            //lista de interfaces 
+            List<Cell> path;
+            path = solver.getPath(maze.getGrid(), start, end);
+            System.out.println(path);
+        
     }
 }

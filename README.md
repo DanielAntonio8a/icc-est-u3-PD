@@ -1,21 +1,53 @@
-## Getting Started
+# Proyecto Java: Ejercicios de Programación Dinámica & Laberinto
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este README describe cómo está organizado el proyecto, cómo compilarlo y ejecutarlo, y qué salida esperar.
 
-## Folder Structure
+---
 
-The workspace contains two folders by default, where:
+## 📂 Estructura de carpetas
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+```bash
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-
+├── src
+│ ├── app
+│ │ └── App.java
+│ ├── controllers
+│ │ └── LibroController.java
+│ ├── models
+│ │ └── Book.java
+│ ├── pd
+│ │ └── EjerciciosPd.java
+│ ├── maze
+│ │ ├── Maze.java
+│ │ ├── Cell.java
+│ │ ├── MazeSolver.java
+│ │ └── MazeSolverRecursivo.java
+│ └── test
+│ ├── LibroControllerTestSet.java
+│ └── LibroControllerTestMap.java
+└── bin ← aquí van los .class compilados
+```
 
 ![alt text](image.png)
+
+![alt text](image-1.png)
+
+
+
+---
+
+## 🛠️ Prerrequisitos
+
+- JDK 11+ instalado y en tu `PATH`
+- Git (opcional, para clonar el repo)
+
+---
+
+## ⚙️ Compilar
+
+Desde la raíz del proyecto, corre:
+
+```bash
+javac -d bin src/**/*.java
