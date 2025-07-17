@@ -24,7 +24,7 @@ src/
 
 ![alt text](image.png)
 
-![alt text](image-1.png)
+<img width="660" height="273" alt="image" src="https://github.com/user-attachments/assets/3ccc09de-49d0-4c57-a9b7-8a88611888d1" />
 
 
 
