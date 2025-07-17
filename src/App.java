@@ -52,6 +52,7 @@ public class App {
             //lista de interfaces 
             List<Cell> path;
             path = solver.getPath(maze.getGrid(), start, end);
+            Collections.reverse(path);
             System.out.println(path);
         
     }
