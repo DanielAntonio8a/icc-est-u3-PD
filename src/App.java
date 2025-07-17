@@ -41,11 +41,12 @@ public class App {
             Cell start = new Cell(0,0);
             Cell end = new Cell(3,3);
             List<MazeSolver> solvers = Arrays.asList(
-                new MazeSolverRecursivo()
-                // new MazeSolverRecursivoCompleto(),
-                // new MazeSolverBFS(),
-                // new MazeSolverDFS()
-                );
+                new MazeSolverRecursivo(),
+                new MazeSolverRecursivoCompleto(),
+                new MazeSolverBFS(),
+                new MazeSolverDFS()
+            );
+
 
             MazeSolver solver= solvers.get(0);
             //lista de interfaces 
